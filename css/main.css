@@ -1,0 +1,980 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
+
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+body {
+    color: #222;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body, p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+}
+
+.center {
+  text-align: center;
+}
+
+.right-align {
+  text-align: right;
+}
+
+section,
+footer {
+  padding: 50px 0;
+}
+
+span.bullet {
+  color: dodgerblue;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* ==========================================================================
+Custom CSS
+========
+Mini Header
+========================================================================== */
+
+.mini-header {
+ position: fixed;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+ font-size: 10px;
+ padding: 5px 0;
+ color: #333;
+ background: #efefef;
+ text-transform: uppercase;
+ font-weight: 500;
+ letter-spacing: 1px;
+ height: 20px;
+ width: 100%;
+ z-index: 998;
+}
+
+.left-container {
+ margin-left: 20px;
+}
+
+.right-container {
+ margin-right: 20px;
+}
+
+.mini-header span i {
+ margin-right: 5px;
+}
+
+.mini-header span:first-child {
+ margin-right: 20px;
+}
+
+.mini-header a,
+.mini-header a:hover,
+.mini-header a:active,
+.mini-header a:link,
+.mini-header a:visited {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;  
+}
+
+/* ==========================================================================
+  Custom CSS
+  ========
+  Navigation Header
+  ========================================================================== */
+
+header {
+  width: 100%;
+  background: #fff;
+  z-index: 999;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.bar,
+.bar:after,
+.bar:before {
+    width: 40px;
+    height: 5px;
+    border-radius: 30px;
+}
+
+.bar {
+    position: relative;
+    transform: translateY(15px);
+    background: #000;
+    transition: all 0ms 300ms;
+}
+
+.bar:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    background: #000;
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar.animate {
+    background: rgba(0, 0, 0, 0)
+}
+
+.bar:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    background: #000;
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar.animate:after {
+    top: 0;
+    box-shadow: 0px 0px 5px transparent;
+    background: #000;
+    transform: rotate(45deg);
+    transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+.bar.animate:before {
+    bottom: 0;
+    box-shadow: 0px 0px 5px transparent;
+    background: #000;
+    transform: rotate(-45deg);
+    transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+nav {
+  position: fixed;
+  background: #fff url('../img/skyway_towing_recovery_banner.png') no-repeat;
+  background-position: 20px center;
+  background-size: 120px;
+  padding: 10px;
+  box-shadow: 0px 5px 5px -5px rgba(0,0,0,.3);
+  z-index: 999;
+  margin-top: 20px;
+  width: 100%;
+}
+
+nav.mobile-animate {
+  height: 100%;
+  background-position: 20px 28px;
+}
+
+nav>ul {
+  text-align: right;
+  list-style: none;
+  margin: 0;
+  margin-right: 20px;
+  padding: 0;
+}
+
+nav.mobile-animate>ul {
+    visibility: visible;
+    margin-top: 70px;
+    font-size: 1.3em;
+}
+
+nav>ul>li {
+    display: inline-block;
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-top: none;
+    padding: 10px 5px;
+}
+
+nav.mobile-animate>ul>li {
+    display: block;
+    text-align: left;
+}
+
+nav>ul>li>a,
+nav>ul>li>a:hover,
+nav>ul>li>a:active,
+nav>ul>li>a:link,
+nav>ul>li>a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+nav>ul>li:hover {
+  background-color: #efefef;
+}
+
+nav>ul>li>a.active {
+  border-top: 3px solid dodgerblue;
+}
+
+nav>ul>li.active:hover {
+  background-color: transparent;
+}
+
+/* ==========================================================================
+   Custom CSS
+   ========
+   Masthead
+   ========================================================================== */
+
+.masthead-container:after {
+  content: '';
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background: transparent;
+  background: -webkit-linear-gradient(to top, transparent, transparent, #000000);
+  background: linear-gradient(to bottom, transparent, transparent, #000000);
+}
+
+.masthead-container {
+  background: url(../img/truck-garage-towing-car.jpg) no-repeat center 40%;
+  background-size: cover;
+  height: calc((6/16)*100vw);
+  min-height: 350px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Custom CSS
+   ========
+   About Section
+   ========================================================================== */
+
+.about-wrapper {
+  background: #000;
+}
+
+#about:before {
+  content: '';
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .7;
+}
+
+#about {
+  margin-top: -160px;
+  background: #000;
+  color: #fff;
+}
+
+h1.section-header {
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h1.section-header>span:after {
+  content: '';
+  display: block;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5%;
+  height: 3px;
+  border-bottom: 3px solid dodgerblue;
+}
+
+#about .about-section-container {
+  margin-top: 50px;
+  font-size: 18px;
+}
+
+#bannerImage {
+  position: relative;
+  top: -160px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.image-container>img {
+  width: 100%;
+  height: auto;
+}
+
+.image-container {
+  float: left;
+  margin: 0 10px 10px 0;
+  padding: 5px 5px 0;
+  background: #efefef;
+}
+
+.image-container p.caption {
+  font-size: 10px;
+  color: #000;
+  text-align: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+#about-cta {
+  text-align: center;
+}
+
+a.cta-button,
+a.cta-button:active,
+a.cta-button:link,
+a.cta-button:visited {
+  color: #fff;
+  background-color: rgba(20,145,255,.4);
+  width: 100%;
+  margin: auto;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1.4em;
+  border: 2px solid dodgerblue;
+  border-radius: 5px;
+  margin-top: 25px;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+
+a.cta-button:hover {
+  background-color: dodgerblue;
+}
+
+/*a.cta-button:before:hover {
+  text-indent: -20px;
+}
+    
+a.cta-button:before:hover:before {
+  opacity: 1;
+  text-indent: 0px;
+}*/
+
+/* ==========================================================================
+   Custom CSS
+   ========
+   Services Section
+   ========================================================================== */
+
+#services {
+  color: #000;
+  text-align: center;
+}
+
+.services-wrapper {
+  background: #efefef;
+  box-shadow: 0px 5px 15px rgba(0,0,0,.3) inset;
+}
+
+#services .service-card-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: stretch;
+  margin-top: 50px;
+}
+
+#services .service-card {
+  box-shadow: 0px 2px 10px 2px rgba(0,0,0,.1);
+}
+
+#services .service-card:first-child {
+  margin-left: 0;
+}
+
+.service-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid #efefef;
+}
+
+.service-icon:after {
+  content: '';
+  display: block;
+  position: relative;
+  top: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  border-bottom: 1px solid #efefef;
+}
+
+.service-icon.signage {
+  background: transparent url('../img/solid-sign-icon.svg') no-repeat center;
+  background-size: 30%;
+}
+
+.service-icon.impound {
+  background: transparent url('../img/solid-impound-icon.svg') no-repeat center;
+  background-size: 80%;
+}
+
+.service-icon.consultation {
+  background: transparent url('../img/solid-consultation-icon.svg') no-repeat center;
+  background-size: 70%;
+}
+
+#services .service-card:last-child {
+  margin-right: 0;
+}
+
+#services .service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 25px 15px;
+  margin: 20px 10px;
+  border: 1px solid #efefef;
+  flex-basis: 33%;
+}
+
+.service-title h2 {
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+#services .service-card .button-container {
+  margin: 20px 10px 0;
+}
+
+a.animated-button.service-button {
+  padding: 10px 30px;
+  text-decoration: none;
+  color: dodgerblue;
+  background-color: transparent;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: 2px solid dodgerblue;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  z-index: 500;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 5px;
+}
+a.animated-button.service-button:hover {
+  color: #fff !important;
+  background-color: transparent;
+  text-shadow: none;
+}
+a.animated-button.service-button:hover:before {
+  bottom: 0%;
+  top: auto;
+  height: 100%;
+}
+a.animated-button.service-button:before {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 0px;
+  width: 100%;
+  z-index: -1;
+  content: '';
+  color: #fff !important;
+  background: dodgerblue;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+
+
+
+/* ==========================================================================
+   Custom CSS
+   ========
+   Footer Section
+   ========================================================================== */
+footer {
+  background: #000 url('../img/ep_naturalblack.png') repeat center;
+  color: #fff;
+}
+
+footer .footer-navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .map iframe {
+  border: 3px solid dodgerblue;
+}
+
+footer .contact {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+footer .contact p {
+  font-size: 14px;
+}
+
+footer .contact a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .footer-navigation h5:after,
+footer .footer-navigation h5:before,
+footer .contact h5:after,
+footer .contact h5:before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  border-bottom: 2px solid dodgerblue;
+  height: 2px;
+  width: 15px;
+}
+
+footer .footer-navigation h5:after,
+footer .contact h5:after {
+  top: -3px;
+  left: 5px;
+}
+
+footer .footer-navigation h5:before,
+footer .contact h5:before {
+  top: -3px;
+  left: -5px;
+}
+
+footer .copyright,
+footer .social {
+  margin-top: 20px;
+}
+
+footer i {
+  color: dodgerblue;
+  margin: 10px 10px 0;
+}
+
+footer .copyright,
+footer .copyright a,
+footer .copyright a:active,
+footer .copyright a:visited,
+footer .copyright a:hover,
+footer .copyright a:link {
+  font-size: 10px;
+}
+
+footer .copyright a,
+footer .copyright a:active,
+footer .copyright a:visited,
+footer .copyright a:hover,
+footer .copyright a:link {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+
+/* ==========================================================================
+   Custom CSS
+   ========
+   Services Page
+   ========================================================================== */
+
+div.row[class*="service-"] {
+    text-align: left;
+    border-bottom: 1px solid dodgerblue;
+    padding-bottom: 30px;
+}
+
+div.row.service-three {
+  border: none;
+}
+
+div[class*="service-"] h2 {
+  color: dodgerblue;
+}
+
+.service-two.row .image-container {
+    margin: 0;
+}
+
+.service-two.row .image-container, .service-two.row .image-container p.caption {
+    background: #000;
+    color: #fff;
+}
+
+div[class*="-list"] ul,
+ul.signage-list,
+.junk-content ul {
+  list-style-type: none;
+}
+
+div[class*="-list"] ul li:before,
+ul.signage-list li:before,
+.junk-content ul li:before {
+    list-style-type: none;
+    content: "\f006";
+    font-family: FontAwesome, sans-serif;
+    color: dodgerblue;
+    margin-right: 10px;
+}
+
+
+/* ==========================================================================
+   Custom CSS
+   ========
+   Junk Car Page
+   ========================================================================== */
+
+.junk-content {
+  margin-top: 20px;
+}
+
+img.junk-car {
+  float: left;  
+  shape-outside: url(../img/junk-car.png);
+}
+
+.junk-content a.service-button.animated-button {
+  text-align: center;
+}
+
+
+/* ==========================================================================
+   Custom CSS
+   ========
+   Contact Page
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Custom CSS
+   ========
+   Responsive Media Queries
+   ========================================================================== */
+
+@media screen and (max-width: 500px) {
+  
+  #bannerImage {
+    top: -140px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .mini-header {
+    display: hidden;
+  }
+
+  nav {
+    margin-top: 0;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding-right: 10px;
+    cursor: pointer;
+    z-index: 9999;
+    height: 35px;
+  }
+
+  nav>ul {
+    visibility: hidden;
+  }
+
+  #services .service-card {
+    flex-basis: 100%;
+  }
+
+  #services .service-card-container {
+    flex-wrap: wrap;
+  }
+
+  #about .about-section-container {
+    font-size: 1em;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+  
+}
